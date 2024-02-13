@@ -1,0 +1,153 @@
+/* FONTS */
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* Color Theming */
+:root {
+    --c-accent: #0077ed;
+    --c-accent-text: #FFF;
+    --c-text: #000;
+    --c-button: #CCC;
+    --c-button-shadow: #CCC;
+
+    --c-card-background: #ececec;
+    --c-background: #FFF;
+    --c-border: #DFDFDF;
+}
+.dark:root {
+    --c-accent: #6d06a8;
+    --c-accent-text: #FFF;
+    --c-text: #FFF;
+    --c-button: #222;
+    --c-button-shadow: #222;
+
+    --c-card-background: #080808;
+    --c-background: #000;
+}
+
+html {
+    background-color: var(--c-background);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#title {
+    color: var(--c-text);
+    font-family: "Lilita One", sans-serif;
+    font-size:32px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+body {
+    padding-top: 50vh;
+    padding-bottom: 10vh;
+}
+
+
+/* Button styling */
+.button, button {
+    cursor: pointer;
+    
+    background-color: var(--c-button);
+    color: var(--c-text);
+    opacity: 1;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+    border:none;
+
+    text-align: center;
+
+    transition: transform 0.05s, filter 0.1s, box-shadow 0.3s,
+    background-color 0.5s, color 0.5s, width .5s, height .5s, opacity 0.2s;
+}
+.button:hover, button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 10px 50px var(--c-button-shadow);
+}
+.button:active, button:active {
+    filter: brightness(0.9);
+    box-shadow: 0 10px 35px var(--c-button-shadow);
+}
+.accent {
+    background-color: var(--c-accent);
+    color: var(--c-accent-text)
+}
+.invisible {
+    opacity: 0;
+}
+
+
+#switchDark { /* Dark mode Toggle Button */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+}
+
+
+
+/* container */
+.center {
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+button.center {
+    display: flex;
+    align-items: flex-start;
+}
+
+.stack > * {
+    display: block;
+    margin-bottom: 10px;
+}
+.stack > button { /* Special rule for button stack */
+    width: 150px;
+    height: 40px
+}
+
+
+
+.card {
+    background-color: var(--c-card-background);
+    border-radius: 10px;
+    transition: background-color 0.5s, filter 0.3s;
+}
+.color-selector {
+    cursor: pointer;
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+}
+.card:hover {
+    filter: brightness(1.05);
+}
+
+
+
+/* File IO */
+.file-upload {
+    display: none;
+}
+button.file-download {
+    height: 200px;
+    width: 400px;
+}
