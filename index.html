@@ -1,42 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="dark" id="htmlDocument">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>GBA Palette Editor</title>
-
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- MAIN UI CONTENT -->
-    <div id="title">
-        <h1>Palette It</h1>
-    </div>
-
-    <!-- Invisible or absolute content -->
-    <button id="switchDark" onclick="toggleDarkMode()">
-        <span id="darkModeIcon" class="material-icons" style="font-size: 36px;">light_mode</span>
-    </button>
-    <input id="romInput" class="file-upload" type="file" accept=".gba">
-
-
-    <!-- Stacked elements -->
-    <div class="stack" id="stack">
-
-        <div id="paletteColors" style="display: flex;" class="center">
-        </div>
-
-        <button id="addRow" class="center" onclick="addPaletteRow()">Add Row</button>
-        <button id="romInputButton" class="center" onclick="openFileDialog()">Open ROM</button>
-        <button id="saveRom" class="center accent" onclick="saveFileDialog(this)">Save ROM</button>
-
-    </div> 
-
-    <script src="script.js"></script>
 </body>
 </html>
